@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Crushed|Khand:400,600');
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Khand", Arial, sans-serif;
+    font-size: 24px;
+}
+
+body {
+    color: #fff;
+    font-size: 1rem;
+    background-color: #2d1d2e;
+}
+
+h1 {
+    font-family: "Crushed";
+    font-size: 1.8rem;
+}
+
+a {
+    color: #d35f4b;
+    text-decoration: none;
+    -webkit-transition: .5s; /* Safari */
+    transition: .5s;
+}
+
+a:hover {
+    color: #ffe49a;
+    text-decoration: none;
+    -webkit-transition: .5s; /* Safari */
+    transition: .5s;
+    text-shadow: 0px 0px 8px rgba(255, 236, 153, 0.6);
+}
+
+header h1 {
+    color: #e4f89b;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    padding: 3px;
+    margin: 3px;
+}
