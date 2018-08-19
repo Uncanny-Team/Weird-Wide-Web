@@ -47,6 +47,24 @@ app.post("/submit", function(req, res) {
   });
 });
 
+// Api route to post for a new user.
+// ===================================
+app.post("/user", function(req, res) {
+  db.User.create(req.body)
+  .then(function(dbUser) {
+
+    res.json(dbUser);
+  })
+  .catch(function(err) {
+
+    res.json(err);
+  });
+});
+
+// Api route to get weird item from database.
+// ============================================
+
+
 // Send every request to the React app.
 // ========================================
 app.get("*", function(req, res) {

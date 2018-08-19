@@ -5,7 +5,9 @@ var Schema = mongoose.Schema;
 var URLSchema = new Schema({
     url: {
         type: String,
-        unique: true
+        unique: true,
+        ref: "Item",
+        field: "url"
 
     }
 });
