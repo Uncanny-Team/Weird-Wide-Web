@@ -10,20 +10,21 @@
 }
 
 html{
-    font-family: "Khand", Arial, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 body {
-    color: #fff;
+    font-family: "Khand", Arial, sans-serif;
+    color: #e6e6e6;
     font-size: 1rem;
     background-color: #261831;
-    min-height: 1000px;
     background: #200226; /* Old browsers */
     background: -moz-radial-gradient(bottom, ellipse cover, #843c3c 1%, #3a1036 49%, #200226 100%); /* FF3.6-15 */
     background: -webkit-radial-gradient(bottom, ellipse cover, #843c3c 1%,#3a1036 49%,#200226 100%); /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(ellipse at bottom, #843c3c 1%,#3a1036 49%,#200226 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#843c3c', endColorstr='#200226',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .header-bg-grad {
@@ -33,6 +34,7 @@ body {
     width: 100%;
     z-index: -10;
     height: 400px;
+    overflow: visible;
     background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(22,1,26,1) 25%, rgba(32,2,38,0.69) 48%, rgba(32,2,38,0) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(22,1,26,1) 25%,rgba(32,2,38,0.69) 48%,rgba(32,2,38,0) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(22,1,26,1) 25%,rgba(32,2,38,0.69) 48%,rgba(32,2,38,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -60,9 +62,14 @@ a:hover {
     text-shadow: 0px 0px 5px rgba(255, 236, 153, 1);
 }
 
+ header{
+     width: 100%;
+     padding: 10px;
+ }
+
 header h1 {
     color: orange;
-    font-size: 2.6rem;
+    font-size: 3rem;
     letter-spacing: 2px;
     padding: 3px;
     margin: 3px;
@@ -70,6 +77,20 @@ header h1 {
                  0px 0px 6px rgba(255, 144, 18, .7), 
                  0px 0px 9px rgba(255, 72, 0, 0.7);
 }
+
+.www-container {
+    width: 100%;
+    margin:auto;
+}
+
+.www-content {
+    width: 80%;
+    background-color: rgba(94, 40, 40, 0.8);
+    padding: 15px;
+    margin: 15px auto;
+}
+
+/* animation */
 
 
 @keyframes flickerAnimation {
