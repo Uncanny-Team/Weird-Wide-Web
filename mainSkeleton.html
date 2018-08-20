@@ -37,20 +37,51 @@
             <li><a href="#">Submit</a></li>
             <!-- Dropdown Trigger -->
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><span>BreannaLordoftheDarkStar71</span></li>
+            <li><span id="userName">BreannaLordoftheDarkStar71</span></li>
             <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a></a></li>
           </ul>
         </div>
       </nav>
 
+      <!-- Content -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <p class="center-align"><span id="quote">"When the going gets weird, the weird turn pro." ~ Hunter S Thompson</span></p>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col 12"></div>
+        </div>
+      </div>
+
       <!-- Modal Structure -->
   <div id="modal1" class="modal">
         <div class="modal-content">
-          <h4>Modal Header</h4>
-          <p>A bunch of text</p>
+          <h4>Login</h4>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                  <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password">Password</label>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
         <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+          <a href="#!" class="waves-effect waves-green btn-flat">Create Account</a>
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Login</a>
         </div>
       </div>
 
