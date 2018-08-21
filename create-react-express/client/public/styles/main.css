@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Monoton|Khand:400,600');
+@import url('https://fonts.googleapis.com/css?family=Khand:400,600');
 @font-face {
     font-family: 'Hello Denver';
     src: url('HelloDenver.woff') format('woff');
@@ -9,8 +9,10 @@
     box-sizing: border-box;
 }
 
-html{
+html,
+div {
     font-size: 20px;
+    font-family: "Khand", "Arial Narrow Special", "Arial Narrow", Arial, sans-serif;
 }
 
 body {
@@ -33,7 +35,7 @@ body {
     left: 0;
     width: 100%;
     z-index: -10;
-    height: 400px;
+    height: 250px;
     overflow: visible;
     background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(22,1,26,1) 25%, rgba(32,2,38,0.69) 48%, rgba(32,2,38,0) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(22,1,26,1) 25%,rgba(32,2,38,0.69) 48%,rgba(32,2,38,0) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -42,7 +44,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c000c', end
 }
 
 h1 {
-    font-family: "Hello Denver", "Monoton", "Arial Black";
+    font-family: "Hello Denver";
     font-size: 1.8rem;
     text-transform: uppercase;
 }
@@ -67,12 +69,15 @@ a:hover {
      padding: 10px;
  }
 
-header h1 {
+header h1,
+nav .brand-logo,
+.brand-logo a,
+.brand-logo a:visited,
+.brand-logo a:active {
     color: orange;
-    font-size: 3rem;
+    font-family: "Hello Denver";
+    text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 3px;
-    margin: 3px;
     text-shadow: 0px 0px 3px rgba(255, 165, 0, 0.9),
                  0px 0px 6px rgba(255, 144, 18, .7), 
                  0px 0px 9px rgba(255, 72, 0, 0.7);
@@ -88,6 +93,23 @@ header h1 {
     background-color: rgba(94, 40, 40, 0.8);
     padding: 15px;
     margin: 15px auto;
+}
+
+/* materialize */
+
+nav {
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn {
+    background-color: #ff7158;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: orange;
+    text-shadow: none;
 }
 
 /* animation */
