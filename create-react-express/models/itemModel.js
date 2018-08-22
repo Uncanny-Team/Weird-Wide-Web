@@ -49,13 +49,13 @@ var ItemSchema = new Schema({
     itemCreated: {
         type: Date,
         default: Date.now
-    },
-    author: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "User"
     }
-]
+//     author: [
+//         {
+//             type: Schema.Types.ObjectId,
+//             ref: "User"
+//     }
+// ]
 });
 
 var Item = mongoose.model("Item", ItemSchema);

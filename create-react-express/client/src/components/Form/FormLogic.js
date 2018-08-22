@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Input } from "./Input";
 import { Button } from "./Button";
+import API from "../../routes/api/API";
 
 
 
@@ -30,11 +31,23 @@ class Form extends Component {
         });
     };
 
-    handleFormSubmit = event => {
+    handleSubmit = event => {
         event.preventDefault();
-        if (this.state.title && this.state.category && this.state.medium && this.state.tags && this.state.url && this.state.image && this.state.description) {
-
-        }
+        
+        console.log("is this thing working?")        
+        API.saveItem({
+            title: this.state.title,
+            category: this.state.category,
+            medium: this.state.medium,
+            tags: this.state.tags,
+            url: this.state.url,
+            image: this.state.image,
+            description: this.state.description,
+            nsfw: this.state.nsfw
+        })
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+        
     };
 
     handleOptionChange = (changeEvent) => {
@@ -80,10 +93,11 @@ class Form extends Component {
                     />
                     <div>
                         <br />
-                        <p>
-                            <p>
+                        <h6>
                                 Choose the medium your weird contribution is.
-      </p>
+                        </h6>
+                        <p>
+                            
                             <br />
                             <label >
                                 <input value="Article" className="with-gap" name="group3" type="radio" onChange={this.handleOptionChange} />
@@ -122,41 +136,41 @@ class Form extends Component {
                         name="tags"
                         placeholder="Submit your tags here!"
                     />
-                        <Input
-                            value={this.state.url}
-                            onChange={this.handleInputChange}
-                            name="url"
-                            placeholder="Place your url link here."
-                        />
-                        <Input
-                            value={this.state.image}
-                            onChange={this.handleInputChange}
-                            name="image"
-                            placeholder="Place your image link here."
-                        />
-                        <Input
-                            value={this.state.description}
-                            onChange={this.handleInputChange}
-                            name="description"
-                            placeholder="Give a short description of what your weird contribution is."
-                        />
-                        <div class="switch">
-                            <label onChange={this.handleToggleChange}>
-                                SFW
+                    <Input
+                        value={this.state.url}
+                        onChange={this.handleInputChange}
+                        name="url"
+                        placeholder="Place your url link here."
+                    />
+                    <Input
+                        value={this.state.image}
+                        onChange={this.handleInputChange}
+                        name="image"
+                        placeholder="Place your image link here."
+                    />
+                    <Input
+                        value={this.state.description}
+                        onChange={this.handleInputChange}
+                        name="description"
+                        placeholder="Give a short description of what your weird contribution is."
+                    />
+                    <div className="switch">
+                        <label onChange={this.handleToggleChange}>
+                            SFW
                     <input type="checkbox" />
-                                <span class="lever"></span>
-                                NSFW
+                            <span className="lever"></span>
+                            NSFW
                     </label>
-                        </div>
-                        <br />
-                        <Button
-                            disabled={!(this.state.title && this.state.category && this.state.medium && this.state.tags && this.state.url && this.state.image && this.state.description)}
-                            onClick={this.handleSubmit}
-                        />
+                    </div>
+                    <br />
+                    <Button
+                        disabled={!(this.state.title && this.state.category && this.state.medium && this.state.tags && this.state.url && this.state.image && this.state.description)}
+                        onClick={this.handleSubmit}
+                    />
                 </form>
             </div>
-                );
-            }
-        }
-        
+        );
+    }
+}
+
 export default Form;

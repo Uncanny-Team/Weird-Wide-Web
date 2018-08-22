@@ -6,10 +6,10 @@ export default {
     getItems: function() {
         return axios.get("/api/items");
     },
-    // Get a specific item by Id.
+    // Get a specific item by title.
     // ===========================
-    getItem: function(id) {
-        return axios.get("/api/items/" + id);
+    getItem: function(title) {
+        return axios.get("/api/items/" + title);
     },
     // Deletes the item with the given Id.
     // =====================================
@@ -18,7 +18,8 @@ export default {
     },
     // Saves the item data to the database.
     saveItem: function(itemData) {
-        return axios.post("/api/items", itemData);
+        console.log(itemData);
+         return axios.post("/api/items/", itemData);
     }
-
-}
+  
+};
