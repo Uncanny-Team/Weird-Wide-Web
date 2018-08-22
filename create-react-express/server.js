@@ -86,9 +86,19 @@ app.post("/user", function (req, res) {
     });
 });
 
-// Api route to get weird item from database.
+// Api route to get all items from database.
 // ============================================
+app.get("/", function(req, res) {
+  db.Item.findAll(req.body)
+  .then(function(dbItem) {
 
+    res.json(dbItem);
+  })
+  .catch(function(err) {
+
+    res.json(err);
+  });
+});
 
 // Send every request to the React app.
 // ========================================

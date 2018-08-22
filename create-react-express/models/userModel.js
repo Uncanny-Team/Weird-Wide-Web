@@ -32,6 +32,9 @@ var UserSchema = new Schema({
      match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
      unique: true
    },
+   weirdScore: {
+     type: Number
+   },
 
    userCreated: {
      type: Date,
