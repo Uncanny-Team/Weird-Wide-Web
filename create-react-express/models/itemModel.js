@@ -39,6 +39,10 @@ var ItemSchema = new Schema({
         type: Number,
         default: 0
     },
+    nsfw: {
+        type: Boolean,
+        default: false
+    },
     comments: {
         type: Array
     },
