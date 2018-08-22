@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../../../../models");
 
 module.exports = {
     findAll: function(req, res) {
@@ -13,5 +13,6 @@ module.exports = {
         .create(req.body)
         .then(dbItem => res.json(dbItem))
         .catch(err => res.status(422).json(err));
-    }
+    },
+
 }
