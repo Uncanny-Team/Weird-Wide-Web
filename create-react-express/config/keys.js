@@ -4,7 +4,7 @@ module.exports = {
         clientSecret: "YJONKjchloZZElJl_7mD20Hh"
     },
     mongodb: {
-         dbURI: '####'
+         dbURI: 'mongodb://localhost/weirddb'
     },
     session: {
         cookieKey: 'strangerthanfiction'
