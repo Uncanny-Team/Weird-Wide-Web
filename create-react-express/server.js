@@ -7,12 +7,6 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require("./client/src/routes");
-// const authRoutes = require('.routes/auth-routes');
-// const profileRoutes = require('.routes/profile-routes');
-// const passportSetup = require('./config.passport-setup');
-// const keys = require('.config/keys');
-// const cookieSession = require('cookie-session');
-// const passport = require('passport');
 
 // Requiring our item and user schema for mongo/mongoose.
 // ======================================================
@@ -22,24 +16,12 @@ const db = require("./models/index");
 // ========================
 app.use(logger("dev"));
 
-// Using cookie-session for Google authentication
-// app.use(cookieSession({
-//   maxAge: 24 * 50 * 60 * 1000,
-//   keys: [keys.session.cookieKey]
-// }));
-
-//initialize passport
-// app.use(passport.initialize());
-// app.use(passport.session());
-
 
 // Using body-parser.
 // ===================
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
-
-
 
 
 // Serve up static assets (usually on Heroku.)
@@ -58,10 +40,6 @@ app.use(routes);
 // =================================================
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/weirddb");
 
-
-//set up routes
-// app.use('/auth', authRoutes);
-// app.use('/profile', profileRoutes);
 
 
 
