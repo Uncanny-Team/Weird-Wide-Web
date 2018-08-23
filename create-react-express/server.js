@@ -47,6 +47,34 @@ app.post("/submit", function(req, res) {
   });
 });
 
+// Api route to post for a new user.
+// ===================================
+app.post("/user", function(req, res) {
+  db.User.create(req.body)
+  .then(function(dbUser) {
+
+    res.json(dbUser);
+  })
+  .catch(function(err) {
+
+    res.json(err);
+  });
+});
+
+// Api route to get all items from database.
+// ============================================
+app.get("/", function(req, res) {
+  db.Item.findAll(req.body)
+  .then(function(dbItem) {
+
+    res.json(dbItem);
+  })
+  .catch(function(err) {
+
+    res.json(err);
+  });
+});
+
 // Send every request to the React app.
 // ========================================
 app.get("*", function(req, res) {

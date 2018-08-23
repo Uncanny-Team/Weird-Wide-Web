@@ -1,4 +1,5 @@
 var mongoose = require("mongoose");
+validators = require('mongoose-validators');
 
 var Schema = mongoose.Schema;
 
@@ -20,7 +21,7 @@ var ItemSchema = new Schema({
     },
     url: {
         type: Array,
-        validate: validator.isURL(value, { protocols: ['http','https','ftp'], require_tld: true, require_protocol: true }),
+        validate:  [ validators.isURL({message: 'Must be a Valid URL', protocols: ['http','https','ftp'], require_tld: true, require_protocol: true} ) ],
         message: "Please enter a valid URL."
     },
     image: {
@@ -44,7 +45,13 @@ var ItemSchema = new Schema({
     itemCreated: {
         type: Date,
         default: Date.now
+    },
+    author: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "User"
     }
+]
 });
 
 var Item = mongoose.model("Item", ItemSchema);

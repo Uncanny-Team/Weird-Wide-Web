@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import Dropdown from "./components/Dropdown";
 import LoginModal from "./components/LoginModal";
-import PHContent from "./components/PHContent";
+import Feature from "./components/Feature";
+import Footer from "./components/Footer";
 
 class App extends Component {
   render() {
@@ -11,7 +12,8 @@ class App extends Component {
         <Dropdown />
         <Navbar />
         <LoginModal />
-        <PHContent />
+        <Feature/>
+        <Footer/>
       </div>
     );
   }
