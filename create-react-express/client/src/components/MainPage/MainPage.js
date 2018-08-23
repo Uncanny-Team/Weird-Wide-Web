@@ -9,6 +9,11 @@ class MainPage extends Component {
     };
 
     componentDidMount() {
-        
+
+    }
+    render() {
+        return (
+            <div></div>
+        );
     }
 }

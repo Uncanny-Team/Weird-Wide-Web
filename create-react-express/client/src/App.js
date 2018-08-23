@@ -1,8 +1,22 @@
 import React, { Component } from "react";
-import "./App.css";
-import Form from "./components/Form/FormLogic";
+import Navbar from "./components/Navbar";
+import Dropdown from "./components/Dropdown";
+import LoginModal from "./components/LoginModal";
+import Feature from "./components/Feature";
+import Footer from "./components/Footer";
 
-
-const App = () => <Form/>;
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Dropdown />
+        <Navbar />
+        <LoginModal />
+        <Feature/>
+        <Footer/>
+      </div>
+    );
+  }
+}
 
 export default App;
