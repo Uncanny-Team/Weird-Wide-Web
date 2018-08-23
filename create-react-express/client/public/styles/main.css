@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Monoton|Khand:400,600');
+@import url('https://fonts.googleapis.com/css?family=Khand:400,600');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
 @font-face {
     font-family: 'Hello Denver';
     src: url('HelloDenver.woff') format('woff');
@@ -9,21 +10,31 @@
     box-sizing: border-box;
 }
 
-html{
-    font-family: "Khand", Arial, sans-serif;
-    font-size: 24px;
+html {
+    height: 100%;
+}
+
+html,
+div {
+    font-size: 20px;
+    font-family: "Khand", "Arial Narrow Special", "Arial Narrow", Arial, sans-serif;
 }
 
 body {
-    color: #fff;
+    font-family: "Khand", Arial, sans-serif;
+    color: #e6e6e6;
     font-size: 1rem;
     background-color: #261831;
-    min-height: 1000px;
     background: #200226; /* Old browsers */
     background: -moz-radial-gradient(bottom, ellipse cover, #843c3c 1%, #3a1036 49%, #200226 100%); /* FF3.6-15 */
     background: -webkit-radial-gradient(bottom, ellipse cover, #843c3c 1%,#3a1036 49%,#200226 100%); /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(ellipse at bottom, #843c3c 1%,#3a1036 49%,#200226 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#843c3c', endColorstr='#200226',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 40px;
 }
 
 .header-bg-grad {
@@ -32,7 +43,8 @@ body {
     left: 0;
     width: 100%;
     z-index: -10;
-    height: 400px;
+    height: 250px;
+    overflow: visible;
     background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(22,1,26,1) 25%, rgba(32,2,38,0.69) 48%, rgba(32,2,38,0) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(22,1,26,1) 25%,rgba(32,2,38,0.69) 48%,rgba(32,2,38,0) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(22,1,26,1) 25%,rgba(32,2,38,0.69) 48%,rgba(32,2,38,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -40,9 +52,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c000c', end
 }
 
 h1 {
-    font-family: "Hello Denver", "Monoton", "Arial Black";
+    font-family: "Hello Denver";
     font-size: 1.8rem;
     text-transform: uppercase;
+}
+
+h5 span#articleTitle {
+    font-family: "Special Elite", "Courier", monospace;
+    font-weight: normal;
 }
 
 a {
@@ -53,23 +70,97 @@ a {
 }
 
 a:hover {
-    color: #ffc65d;
+    color: #baee90;
     text-decoration: none;
     -webkit-transition: .5s; /* Safari */
     transition: .5s;
     text-shadow: 0px 0px 5px rgba(255, 236, 153, 1);
 }
 
-header h1 {
+ header{
+     width: 100%;
+     padding: 10px;
+ }
+
+header h1,
+nav .brand-logo,
+.brand-logo a,
+.brand-logo a:visited,
+.brand-logo a:active {
     color: orange;
-    font-size: 2.6rem;
+    font-family: "Hello Denver";
+    text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 3px;
-    margin: 3px;
     text-shadow: 0px 0px 3px rgba(255, 165, 0, 0.9),
                  0px 0px 6px rgba(255, 144, 18, .7), 
                  0px 0px 9px rgba(255, 72, 0, 0.7);
 }
+
+.www-container {
+    width: 100%;
+    margin:auto;
+}
+
+.www-content {
+    color: rgb(66, 19, 12);
+    width: 80%;
+    background-image: url("../images/paper2.jpg");
+    background-size: 40%;
+    padding: 15px;
+    margin: 15px auto;
+    -webkit-box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.75);
+}
+
+img.www-thumbnail {
+max-width: 100%;
+}
+
+/* materialize */
+
+nav {
+    background: transparent;
+    box-shadow: none;
+}
+
+.btn {
+    background-color: #ff7158;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: orange;
+    text-shadow: none;
+}
+
+.page-footer {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    position: absolute; 
+    left: 0 ; right: 0; bottom: 0;
+}
+
+footer.page-footer {
+    background-color: #80424f;
+}
+
+footer.page-footer a {
+    color: transparent;
+}
+
+footer.page-footer a:hover {
+    color: #baee90;
+}
+
+
+
+
+
+
+
+/* animation */
 
 
 @keyframes flickerAnimation {
