@@ -11,7 +11,26 @@ const mongoose = require('mongoose');
 const keys = require('.config/keys');
 const cookieSession = require('cookie-session'); 
 const passport = require('passport');
+import React, { Component } from "react";
+import Navbar from "./components/Navbar";
+import Dropdown from "./components/Dropdown";
+import LoginModal from "./components/LoginModal";
+import Feature from "./components/Feature";
+import Footer from "./components/Footer";
 
+// class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <Dropdown />s
+//         <Navbar />
+//         <LoginModal />
+//         <Feature/>
+//         <Footer/>
+//       </div>
+//     );
+//   }
+// }
 app.use(cookieSession({
 maxAge: 24 * 50 *60 * 1000, 
 keys: [keys.session.cookieKey]
