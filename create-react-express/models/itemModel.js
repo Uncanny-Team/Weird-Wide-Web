@@ -39,19 +39,23 @@ var ItemSchema = new Schema({
         type: Number,
         default: 0
     },
+    nsfw: {
+        type: Boolean,
+        default: false
+    },
     comments: {
         type: Array
     },
     itemCreated: {
         type: Date,
         default: Date.now
-    },
-    author: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "User"
     }
-]
+//     author: [
+//         {
+//             type: Schema.Types.ObjectId,
+//             ref: "User"
+//     }
+// ]
 });
 
 var Item = mongoose.model("Item", ItemSchema);
