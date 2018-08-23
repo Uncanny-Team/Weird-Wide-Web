@@ -4,12 +4,11 @@ const controller = require("./controller");
 // Matched with "/api/items"
 // ==========================
 router.route("/")
-.get(controller.findAll)
 .post(controller.create);
 
 // Matches with "/api/items/:id"
 // ===============================
-router.route("/:id")
-
+router.route("/:tags/:medium/:nsfw/:weirdness")
+.get(controller.find)
 
     module.exports = router;
