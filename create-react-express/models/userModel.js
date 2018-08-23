@@ -32,6 +32,10 @@ var UserSchema = new Schema({
      match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
      unique: true
    },
+   googleId: {
+     type: String,
+     unique: true,
+   },
    weirdScore: {
      type: Number
    },
