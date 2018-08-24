@@ -5,7 +5,7 @@ const profileRoutes = require("./profile-routes");
 
 
 // Item routes
-router.use("/items", itemRoutes);
+router.use("/api/items", itemRoutes);
 router.use("/auth", authRoutes);
 router.use("/profile", profileRoutes);
 

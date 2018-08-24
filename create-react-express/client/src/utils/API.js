@@ -16,6 +16,14 @@ export default {
     saveItem: function(itemData) {
         console.log(itemData);
          return axios.post("/api/items/", itemData);
+    },
+    // Login for local.
+    loginLocal: function(loginData) {
+        return axios.post("/login-local", loginData);
+    },
+    // Login for Google.
+    loginGoogle: function(loginData) {
+        return axios.get("/google");
     }
   
 };

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import API from "../../routes/api/API";
+import API from "../../utils/API";
 import { Input } from "../Form/Input";
 import { Button } from "../Form/Button";
 import { Range } from "../Form/Range";
