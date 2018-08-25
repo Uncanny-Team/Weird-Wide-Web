@@ -10,3 +10,5 @@ class itemSubmitForm extends React.Component {
         )
     }
 }
+
+export default itemSubmitForm;
