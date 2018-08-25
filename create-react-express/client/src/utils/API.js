@@ -5,7 +5,7 @@ export default {
     // ===================
     searchItems: function(itemData) {
         console.log(itemData);
-        return axios.get(`/api/items/${itemData.tags}/${itemData.medium}/${itemData.nsfw}/${itemData.weirdness}`);
+        return axios.get(`/api/items/${itemData.medium}/${itemData.nsfw}/${itemData.weirdness}`);
     },
     // Deletes the item with the given Id.
     // =====================================

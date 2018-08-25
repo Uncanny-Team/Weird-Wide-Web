@@ -1,4 +1,4 @@
-$( document ).ready(function() {
-    $("#dropdown1").dropdown();
-    $('.modal').modal();
-});
+// $( document ).ready(function() {
+//     $("#dropdown1").dropdown();
+//     $('.modal').modal();
+// });
