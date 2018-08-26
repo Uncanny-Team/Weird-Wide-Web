@@ -66,19 +66,28 @@ class Display extends Component {
     loadItems = (res) => {
         this.setState({
             items: res.data, title: "", category: "", medium: "", nsfw: "", url: "", description: "", weirdness: "", comments: "" });
-    } 
+    };
 
     handleSubmit = event => {
         event.preventDefault();
+        this.handleClearArray();
         API.searchItems({
             medium: this.state.medium,
             weirdness: this.state.weirdness,
-            tags: this.state.tags,
             nsfw: this.state.nsfw
         })
         .then(res => this.loadItems(res));
 
-    }
+    };
+
+
+    handleClearArray = () => {
+        this.setState({
+            items:[]
+        });
+    };
+
+
 
     render() {
         return (
@@ -92,35 +101,34 @@ class Display extends Component {
                         <p>
 
                             <br />
-                            <label >
-                                <input value="Article" className="with-gap" name="group3" type="radio" onChange={this.handleOptionChange} />
-                                <span>Article</span>
-                            </label>
-                            {" "}
-                            <label>
-                                <input value="Video" className="with-gap" name="group3" type="radio" value="Video" onChange={this.handleOptionChange} />
-                                <span>Video</span>
-                            </label>
-                            {" "}
-                            <label>
-                                <input value="Audio" className="with-gap" name="group3" type="radio" value="Audio" onChange={this.handleOptionChange} />
-                                <span>Audio</span>
-                            </label>
-                            {" "}
-                            <label>
-                                <input value="Video game" className="with-gap" name="group3" type="radio" value="Video Game" onChange={this.handleOptionChange} />
-                                <span>Video Game</span>
-                            </label>
-                            {" "}
-                            <label>
-                                <input value="Art" className="with-gap" name="group3" type="radio" value="Art" onChange={this.handleOptionChange} />
-                                <span>Art</span>
-                            </label>
-                            {" "}
-                            <label>
-                                <input value="Website" className="with-gap" name="group3" type="radio" value="Website" onChange={this.handleOptionChange} />
-                                <span>Website</span>
-                            </label>
+                            
+                            <input id="article"value="Article" className="with-gap" name="group1" type="radio" onChange={this.handleOptionChange} />
+                            <label for="article" >Article</label>
+                        
+                        {" "}
+                        
+                            <input id="video" value="Video" className="with-gap" name="group1" type="radio" value="Video" onChange={this.handleOptionChange} />
+                            <label for="video" >Video</label>
+                        
+                        {" "}
+                        
+                            <input id="audio" value="Audio" className="with-gap" name="group1" type="radio" value="Audio" onChange={this.handleOptionChange} />
+                            <label for="audio" >Audio</label>
+                        
+                        {" "}
+                        
+                            <input id="video_game" value="Video game" className="with-gap" name="group1" type="radio" value="Video Game" onChange={this.handleOptionChange} />
+                            <label for="video_game">Video game</label>
+                        
+                        {" "}
+                        
+                            <input id="art" value="Art" className="with-gap" name="group1" type="radio" value="Art" onChange={this.handleOptionChange} />
+                            <label for="art">Art</label>
+                        
+                        {" "}
+                        
+                            <input id="website" value="Website" className="with-gap" name="group1" type="radio" value="Website" onChange={this.handleOptionChange} />
+                            <label for="website">Website</label>
                         </p>
                     </div>
                     <p>
@@ -129,38 +137,37 @@ class Display extends Component {
                             Choose how weird! 1 is a little weird and 5 is melt your eyes out weird.
                             </h6>
                     <br />
-                            <label >
-                                <input value="1" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
-                                <span>1</span>
-                            </label>
+                            
+                                <input id="0" value="0" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
+                                <label for="0" >0</label>
+                            
                             {" "}
-                            <label >
-                                <input value="2" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
-                                <span>2</span>
-                            </label>
+
+                                <input id="1" value="1" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
+                                <label for="1" >1</label>
+                            
                             {" "}
-                            <label >
-                                <input value="3" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
-                                <span>3</span>
-                            </label>
+                            
+                                <input id="2" value="2" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
+                                <label for="2" >2</label>
+
                             {" "}
-                            <label >
-                                <input value="4" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
-                                <span>4</span>
-                            </label>
+                            
+                                <input id="3" value="3" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
+                                <label for="3" >3</label>
+                            
                             {" "}
-                            <label >
-                                <input value="5" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
-                                <span>5</span>
-                            </label>
+                            
+                                <input id="4" value="4" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
+                                <label for="4" >4</label>
+
+                            {" "}
+                            
+                                <input id="5" value="5" className="with-gap" name="group3" type="radio" onChange={this.handleRangeChange} />
+                                <label for="5" >5</label>
+
                             {" "}
                             </p>
-                    <Input
-                        value={this.state.tags}
-                        onChange={this.handleInputChange}
-                        name="tags"
-                        placeholder="Tag (Type a tag you wish to search for."
-                    />
                     <div className="switch">
                         <label onChange={this.handleToggleChange}>
                             SFW

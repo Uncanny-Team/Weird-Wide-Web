@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Feature from "../Feature"
+import Footer from "../Footer";
 
 class MainPage extends Component {
     state = {
@@ -13,7 +15,12 @@ class MainPage extends Component {
     }
     render() {
         return (
-            <div></div>
+            <div>
+                <Feature/>
+                <Footer/>
+            </div>
         );
     }
 }
+
+export default MainPage;
