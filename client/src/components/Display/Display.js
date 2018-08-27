@@ -190,6 +190,8 @@ class Display extends Component {
                         {item.title}
                         </strong>
                         <br/>
+                        <img src={item.image} value={item.title}/>
+                        <br/>
                         <a href={item.url}>
                             {item.url}
                             </a>
