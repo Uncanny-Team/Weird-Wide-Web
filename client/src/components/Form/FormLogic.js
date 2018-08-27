@@ -34,12 +34,13 @@ class Form extends Component {
     handleSubmit = event => {
         event.preventDefault();
         
-        console.log("is this thing working?")        
+        var tag = this.state.tags.split(",");
+        
         API.saveItem({
             title: this.state.title,
             category: this.state.category,
             medium: this.state.medium,
-            tags: this.state.tags,
+            tags: tag,
             url: this.state.url,
             image: this.state.image,
             description: this.state.description,
