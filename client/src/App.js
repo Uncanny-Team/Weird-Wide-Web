@@ -16,8 +16,8 @@ class App extends Component {
         <Nav />
         <Switch>
           <Route exact path="/" component={MainPage} />
-          <Route exact path="/display" component={Display} />
-          <Route exact path="/form" component={Form} />
+          <Route exact path="https://boiling-river-46975.herokuapp.com/display" component={Display} />
+          <Route exact path="https://boiling-river-46975.herokuapp.com/form" component={Form} />
           </Switch>
       </div>
       </Router>
