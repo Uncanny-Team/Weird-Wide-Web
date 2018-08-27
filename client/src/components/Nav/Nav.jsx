@@ -6,7 +6,7 @@ const Nav = props => (
         <NavItem  href='#'>Randomize</NavItem>
         <NavItem  href='#'>Submit</NavItem>
         <NavItem><Dropdown trigger={
-                    <Button className="dropdown-trigger">Pages<Icon right></Icon></Button>
+                    <Button className="dropdown-trigger">Pages<Icon right>arrow_drop_down</Icon></Button>
 
                 }>
                 {/* add more as needed   */}
