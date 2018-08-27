@@ -6,15 +6,13 @@ const Nav = props => (
         <NavItem  href='#'>Randomize</NavItem>
         <NavItem  href='#'>Submit</NavItem>
         <NavItem><Dropdown trigger={
-                    <Button className="dropdown-trigger">Categories<Icon right>arrow_drop_down</Icon></Button>
+                    <Button className="dropdown-trigger">Pages<Icon right>arrow_drop_down</Icon></Button>
 
                 }>
                 {/* add more as needed   */}
-                    <NavItem><a href="#">Movies</a></NavItem>
-                    <NavItem><a href="#">Internet</a></NavItem>
-                    <NavItem><a href="#">Music</a></NavItem>
-                    <NavItem><a href="#">Books</a></NavItem>
-                    <NavItem><a href="#">TEST</a></NavItem>
+                    <NavItem><a href="/">Home</a></NavItem>
+                    <NavItem><a href="/form">Submit Form</a></NavItem>
+                    <NavItem><a href="/display">Search</a></NavItem>
 
                 </Dropdown></NavItem>
         <NavItem  href={props.userPageUrl}>{props.userName}<span>BreannaLordoftheDarkStar71</span> </NavItem>
