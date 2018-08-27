@@ -9,7 +9,8 @@ class FeatureRating extends Component {
         return (
             <div className="row">
                 <div className="col s12">
-                    <p>WEIRD RATING GOES HERE</p>
+                    <stong><p>Weirdness Score</p></stong>
+                    <p>{this.props.weirdness}</p>
                 </div>
             </div>
         );

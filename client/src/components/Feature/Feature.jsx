@@ -1,7 +1,7 @@
 import React from "react";
 import FeatureTags from "./FeatureTags";
 import FeatureLinks from "./FeatureLinks";
-import FeatureRating from "./FeatureLinks";
+import FeatureRating from "./FeatureRating";
 import FeatureDesc from "./FeatureDesc";
 import Comment from "./Comment";
 
@@ -18,23 +18,26 @@ class Feature extends React.Component {
             <div className="container www-content">
                 <div className="row">
                     <div className="col s12">
-                        <h5><span id="articleTitle">Winchester Mystery House</span></h5>
+                        <h5><span id="articleTitle">{this.props.title}</span></h5>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col l3 m3 s12">
-                        <img className="materialboxed www-thumbnail" id="articleImage" src="https://www.santaclara.org/wp-content/uploads/2015/12/Winchester-Banner-1.jpg"
+                        <img className="materialboxed www-thumbnail" id="articleImage" src={this.props.image}
                             alt="Weird Image" />
-                        <FeatureRating />
+                        <FeatureRating
+                        weirdness={this.props.weirdness} />
                         <div className="row">
                             <div className="col s12">
-                                <FeatureTags />
+                                <FeatureTags
+                                tags={this.props.tags} />
                             </div>
                         </div>
                         <div className="row">
                             <div className="col s12">
                                 <ul>
-                                    <FeatureLinks />
+                                    <FeatureLinks 
+                                    url={this.props.url}/>
                                 </ul>
                             </div>
                         </div>
@@ -43,7 +46,9 @@ class Feature extends React.Component {
 
                         <div className="row">
                             <div className="col s12">
-                                <FeatureDesc />
+                                <FeatureDesc
+                                description={this.props.description}
+                                />
                             </div>
 
                             <Comment />
