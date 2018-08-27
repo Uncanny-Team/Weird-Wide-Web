@@ -20,10 +20,8 @@ module.exports = {
     random: function(req, res) {
         console.log("Calling randomizer");
         db.Item
-        .aggregate(
-            [ { $sample: {size:2 }} ]
-        )
-        .then(xyz => alert(xyz))
+        .find({})
+        .then(dbItem => res.json(dbItem))
         .catch(err => res.status(422).json(err));
     }
 

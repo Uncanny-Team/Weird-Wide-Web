@@ -24,7 +24,9 @@ class MainPage extends Component {
     };
 
     loadItems = (res) => {
-     //   console.log(res.data);
+        let array = res.data;
+       let random = array[Math.floor(Math.random()*array.length)];
+        console.log(random);
         this.setState({
             items: res.data, title: "", category: "", medium: "", nsfw: "", url: "", description: "", weirdness: "", comments: "" });
     };
