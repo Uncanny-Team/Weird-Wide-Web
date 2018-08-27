@@ -12,6 +12,7 @@
 
 html {
     height: 100%;
+    background-color: #261831;
 }
 
 html,
@@ -24,17 +25,18 @@ body {
     font-family: "Khand", Arial, sans-serif;
     color: #e6e6e6;
     font-size: 1rem;
-    background-color: #261831;
-    background: #200226; /* Old browsers */
+    background: #261831; /* Old browsers */
     background: -moz-radial-gradient(bottom, ellipse cover, #843c3c 1%, #3a1036 49%, #200226 100%); /* FF3.6-15 */
     background: -webkit-radial-gradient(bottom, ellipse cover, #843c3c 1%,#3a1036 49%,#200226 100%); /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(ellipse at bottom, #843c3c 1%,#3a1036 49%,#200226 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#843c3c', endColorstr='#200226',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-    background-size: contain;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
     min-height: 100%;
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .header-bg-grad {
@@ -105,10 +107,11 @@ nav .brand-logo,
 .www-content {
     color: rgb(66, 19, 12);
     width: 80%;
+    background-color: #f7f6ee;
     background-image: url("../images/paper2.jpg");
     background-size: 40%;
     padding: 15px;
-    margin: 15px auto;
+    margin: 15px auto !important;
     -webkit-box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.75);
 box-shadow: 0px 1px 10px 1px rgba(0,0,0,0.75);
@@ -136,6 +139,7 @@ nav {
 }
 
 .page-footer {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -170,6 +174,10 @@ nav .brand-logo,
     font-size: 24px;
 
 } 
+}
+
+::-webkit-input-placeholder {
+    color: cadetblue;
 }
 
 
