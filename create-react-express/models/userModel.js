@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-
+var bcrypt = require("bcrypt");
 
 var Schema = mongoose.Schema;
 
@@ -45,6 +45,22 @@ var UserSchema = new Schema({
      default: Date.now
    }
 });
+
+UserSchema.pre("save", function(next) {
+  this.hashPassword();
+
+  next();
+});
+
+UserSchema.methods.hashPassword = function(){
+  if(!this.password) return;
+  const hash = bcrypt.hashSync(this.password, 10);
+  this.password = hash;
+}
+
+UserSchema.methods.validatePassword = function(password){
+  return bcrypt.compareSync(password, this.password);
+}
 
 
 var User = mongoose.model("User", UserSchema);

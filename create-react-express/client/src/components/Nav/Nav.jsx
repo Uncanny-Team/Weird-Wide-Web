@@ -1,4 +1,5 @@
 import React from "react"
+// import Router from "router"
 import { Navbar, Button, Icon, Dropdown, NavItem, Modal, Input, Row } from "react-materialize"
 
 const Nav = props => (
@@ -17,15 +18,24 @@ const Nav = props => (
                     <NavItem><a href="#">TEST</a></NavItem>
 
                 </Dropdown></NavItem>
-        <NavItem  href={props.userPageUrl}>{props.userName}<span>BreannaLordoftheDarkStar71</span> </NavItem>
+        <NavItem  href={props.userPageUrl}><span>{props.user ? props.user.username: ""}</span> </NavItem>
         <NavItem><Modal
                     header='Login'
-                    trigger={<Button>Login</Button>}>
+                    trigger={<Button>Login</Button>}
+                    actions={<div>
+                        <Button onClick={props.handleGoogle}>Login with Google</Button>
+                        <Button onClick={props.handleCreate}>Create Account</Button>
+                        <Button onClick={props.handleLogin}>Login</Button>
+                    </div>}>
+    
                     <Row>
-                        <Input type="email" s={12} label="Email" validate />
+                        <Input name="username" type="text" s={12} label="Usernamer" onChange={props.handleInputChange} validate />
                     </Row>
                     <Row>
-                        <Input type="password" s={12} label="Password" validate />
+                        <Input name="email" type="email" s={12} label="Email" onChange={props.handleInputChange} validate />
+                    </Row>
+                    <Row>
+                        <Input name="password" type="password" s={12} label="Password" onChange={props.handleInputChange} validate />
                     </Row>
                 </Modal></NavItem>
     </Navbar>

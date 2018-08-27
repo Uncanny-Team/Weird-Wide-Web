@@ -1,8 +1,21 @@
 const router = require('express').Router();
-const passport = require('passport');
+const passport = require("../config/passport-setup");
+const db = require("../models");
+
+
 
 //auth login local
-router.post('/login-local', passport.authenticate('local'),(req, res) => {
+router.post('/signup',(req, res) => {
+    console.log("SIGNUP:", req.body)
+    db.User.create(req.body)
+    .then(data => {
+        res.json("Yay!");
+    })
+});
+
+
+//auth login local
+router.post('/local', passport.authenticate('local'),(req, res) => {
     res.json(req.user);
 });
 
