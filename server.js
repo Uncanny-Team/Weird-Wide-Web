@@ -9,8 +9,20 @@ const app = express();
 const routes = require("./routes");
 const keys = require('./config/keys');
 const cookieSession = require('cookie-session'); 
-const passportSetup = require('./config/passport-setup'); 
+const passportSetup = require('./config/passport-setup');
+const path = require("path");
 
+
+// Serve up static assets (usually on Heroku.)
+// =============================================
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+app.use(express.static(__dirname + '/'));
+app.get('*', function (request, response){
+    response.sendFile(path.resolve(__dirname, "./client/src/index.js"))
+});
 
 app.use(cookieSession({
 maxAge: 24 * 50 *60 * 1000, 
@@ -37,11 +49,7 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
 
-// Serve up static assets (usually on Heroku.)
-// =============================================
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+
 
 // Add routes!
 // =============
