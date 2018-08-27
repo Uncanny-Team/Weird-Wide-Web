@@ -12,6 +12,7 @@ const LoginModal = () => (
                         <div className="input-field col s12">
                             <input id="email" type="email" className="validate" />
                             <label for="email">Email</label>
+                            <span className="helper-text" data-error="wrong" data-success="right">Helper text</span>
                         </div>
                     </div>
                     <div className="row">

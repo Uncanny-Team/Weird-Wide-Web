@@ -1,27 +1,27 @@
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import "./App.css";
+// import "./App.css";
 import Form from "./components/Form/FormLogic";
 import Display from "./components/Display/Display";
+import MainPage from "./components/MainPage/MainPage";
 import React, { Component } from "react";
-import Navbar from "./components/Navbar";
-import Dropdown from "./components/Dropdown";
-import LoginModal from "./components/LoginModal";
-import Feature from "./components/Feature";
-import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+
+
 
 class App extends Component {
   render() {
     return (
+      <Router>
       <div>
-        <Dropdown />
-        <Navbar />
-        <LoginModal />
-        <Feature/>
-        <Footer/>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={MainPage} />
+          <Route exact path="/display" component={Display} />
+          <Route exact path="/form" component={Form} />
+          </Switch>
       </div>
+      </Router>
     );
   }
 }
-
-
 export default App;

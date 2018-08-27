@@ -45,9 +45,29 @@ class Form extends Component {
             description: this.state.description,
             nsfw: this.state.nsfw
         })
-        .then(res => console.log(res))
+        .then(res => this.handleFormClear())
         .catch(err => console.log(err));
         
+    };
+
+    handleFormClear = () => {
+        this.setState({
+            user: "",
+        userId: "",
+        weirdScore: 0,
+        loggedIn: false,
+        title: "",
+        category: "",
+        medium: "",
+        tags: "",
+        url: "",
+        image: "",
+        description: "",
+        exposure: "",
+        weirdness: "",
+        nsfw: false,
+        comments: ""
+        })
     };
 
     handleOptionChange = (changeEvent) => {
@@ -99,35 +119,35 @@ class Form extends Component {
                         <p>
                             
                             <br />
-                            <label >
-                                <input value="Article" className="with-gap" name="group3" type="radio" onChange={this.handleOptionChange} />
-                                <span>Article</span>
-                            </label>
+                            
+                                <input id="article"value="Article" className="with-gap" name="group1" type="radio" onChange={this.handleOptionChange} />
+                                <label for="article" >Article</label>
+                            
                             {" "}
-                            <label>
-                                <input value="Video" className="with-gap" name="group3" type="radio" value="Video" onChange={this.handleOptionChange} />
-                                <span>Video</span>
-                            </label>
+                            
+                                <input id="video" value="Video" className="with-gap" name="group1" type="radio" value="Video" onChange={this.handleOptionChange} />
+                                <label for="video" >Video</label>
+                            
                             {" "}
-                            <label>
-                                <input value="Audio" className="with-gap" name="group3" type="radio" value="Audio" onChange={this.handleOptionChange} />
-                                <span>Audio</span>
-                            </label>
+                            
+                                <input id="audio" value="Audio" className="with-gap" name="group1" type="radio" value="Audio" onChange={this.handleOptionChange} />
+                                <label for="audio" >Audio</label>
+                            
                             {" "}
-                            <label>
-                                <input value="Video game" className="with-gap" name="group3" type="radio" value="Video Game" onChange={this.handleOptionChange} />
-                                <span>Video Game</span>
-                            </label>
+                            
+                                <input id="video_game" value="Video game" className="with-gap" name="group1" type="radio" value="Video Game" onChange={this.handleOptionChange} />
+                                <label for="video_game">Video game</label>
+                            
                             {" "}
-                            <label>
-                                <input value="Art" className="with-gap" name="group3" type="radio" value="Art" onChange={this.handleOptionChange} />
-                                <span>Art</span>
-                            </label>
+                            
+                                <input id="art" value="Art" className="with-gap" name="group1" type="radio" value="Art" onChange={this.handleOptionChange} />
+                                <label for="art">Art</label>
+                            
                             {" "}
-                            <label>
-                                <input value="Website" className="with-gap" name="group3" type="radio" value="Website" onChange={this.handleOptionChange} />
-                                <span>Website</span>
-                            </label>
+                            
+                                <input id="website" value="Website" className="with-gap" name="group1" type="radio" value="Website" onChange={this.handleOptionChange} />
+                                <label for="website">Website</label>
+                            
                         </p>
                     </div>
                     <Input

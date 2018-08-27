@@ -6,7 +6,7 @@ export default {
     // ===================
     searchItems: function(itemData) {
         console.log(itemData);
-        return axios.get(`/api/items/${itemData.tags}/${itemData.medium}/${itemData.nsfw}/${itemData.weirdness}`);
+        return axios.get(`/api/items/${itemData.medium}/${itemData.nsfw}/${itemData.weirdness}`);
     },
     // Deletes the item with the given Id.
     // =====================================
@@ -18,13 +18,13 @@ export default {
         console.log(itemData);
          return axios.post("/api/items/", itemData);
     },
+    // Login for local.
     loginLocal: function(loginData) {
-        console.log(loginData);
         return axios.post("/login-local", loginData);
     },
+    // Login for Google.
     loginGoogle: function(loginData) {
-        console.log(loginData);
-        return axios("/google", loginData);
+        return axios.get("/google");
     }
   
 };

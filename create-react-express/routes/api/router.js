@@ -8,7 +8,7 @@ router.route("/")
 
 // Matches with "/api/items/:id"
 // ===============================
-router.route("/:tags/:medium/:nsfw/:weirdness")
+router.route("/:medium/:nsfw/:weirdness")
 .get(controller.find)
 
     module.exports = router;
