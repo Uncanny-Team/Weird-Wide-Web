@@ -8,7 +8,7 @@
     "start:prod": "node server.js",
     "start:dev": "npm run client",
     "client": "cd ./create-react-express/client && npm run start",
-    "install": "cd ./create-react-express/client && yarn install",
+    "install": "cd ./create-react-express/client && npm install",
     "build": "cd ./create-react-express/client && npm run build",
     "heroku-postbuild": "npm run build"
   },
