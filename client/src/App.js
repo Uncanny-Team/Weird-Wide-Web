@@ -5,6 +5,7 @@ import Form from "./components/Form/FormLogic";
 import Display from "./components/Display/Display";
 import MainPage from "./components/MainPage/MainPage";
 import Nav from "./components/Nav";
+import UserPage from "./components/UserPage/UserPage";
 
 
 
@@ -17,6 +18,7 @@ const App = () => (
           <Route exact path="/" component={MainPage} />
           <Route exact path="/display" component={Display} />
           <Route exact path="/form" component={Form} />
+          <Route exact path="/user" component={UserPage} />
           </Switch>
       </div>
       </Router>

@@ -13,6 +13,7 @@ const Nav = props => (
                     <NavItem><a href="/">Home</a></NavItem>
                     <NavItem><a href="/form">Submit Form</a></NavItem>
                     <NavItem><a href="/display">Search</a></NavItem>
+                    <NavItem><a href="/user">User Page</a></NavItem>
 
                 </Dropdown></NavItem>
         <NavItem  href={props.userPageUrl}>{props.userName}<span>BreannaLordoftheDarkStar71</span> </NavItem>
