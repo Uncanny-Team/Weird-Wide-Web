@@ -36,7 +36,7 @@ body {
   background-size: cover;
     min-height: 100%;
     position: relative;
-    padding-bottom: 60px;
+    padding: 0 20px 60px;
 }
 
 .header-bg-grad {
@@ -66,6 +66,14 @@ h2 {
     padding: 5px;
 }
 
+h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    display:inline;
+}
+
+h5,
 h5 span#articleTitle {
     font-family: "Special Elite", "Courier", monospace;
     font-weight: normal;
@@ -131,6 +139,15 @@ max-width: 100%;
 img.www-thumbnail.active {
     max-width: none;
     }
+
+.search-thumbnail {
+    width: 30%;
+    max-width: 350px;
+}
+
+.search-flex {
+    display: flex;
+}
 
 /* materialize */
 
@@ -267,6 +284,10 @@ nav .brand-logo,
     font-size: 24px;
 
 } 
+.search-thumbnail {
+    width: 100%;
+    max-width: none;
+}
 }
 
 

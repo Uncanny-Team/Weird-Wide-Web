@@ -191,26 +191,36 @@ class Display extends Component {
                     <Card>
                         {this.state.items.map(item => (
                             <Container key={item.title}>
-                                <strong>
-                                    {item.title}
-                                </strong>
-                                <br />
-                                <img src={item.image} value={item.title} />
-                                <br />
-                                <a href={item.url}>
-                                    {item.url}
-                                </a>
-                                <p>
-                                    Author: {item.author} || Category: {item.category} || Medium: {item.medium}
-                                </p>
-                                <p>
-                                    Description: {item.description}
-                                </p>
+                                <div className="search-thumbnail">
+                                    <img className="www-thumbnail" src={item.image} value={item.title} />
+                                </div>
+                                <div className="search-info">
+                                    <h5>
+                                        {item.title}
+                                    </h5>
+                                    <h3>Link:</h3>
+                                    <a href={item.url}>
+                                        {item.url}
+                                    </a>
+                                    <p>
+                                        <h3>Author:</h3> {item.author}
+                                    </p>
+                                    <p>
+                                        <h3>Category:</h3> {item.category}
+                                    </p>
+                                    <p>
+                                        <h3>Medium:</h3> {item.medium}
+                                    </p>
+                                    <h3>Description:</h3>
+                                    <p>
+                                        {item.description}
+                                    </p>
+                                </div>
                             </Container>
                         ))}
                     </Card>
                 ) : (
-                        <h3>No Result Found (Yet)</h3>
+                        <h5>No Result Found (Yet)</h5>
                     )}
 
 
