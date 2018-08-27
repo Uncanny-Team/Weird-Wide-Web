@@ -10,20 +10,11 @@ const Nav = props => (
                 Pages<Icon right>arrow_drop_down</Icon>
             </Button>
 
-<<<<<<< HEAD
         }>
             {/* add more as needed   */}
             <NavItem><a href="/">Home</a></NavItem>
             <NavItem><a href="/form">Submit Form</a></NavItem>
             <NavItem><a href="/display">Search</a></NavItem>
-=======
-                }>
-                {/* add more as needed   */}
-                    <NavItem><a href="/">Home</a></NavItem>
-                    <NavItem><a href="/form">Submit Form</a></NavItem>
-                    <NavItem><a href="/display">Search</a></NavItem>
-                    <NavItem><a href="/user">User Page</a></NavItem>
->>>>>>> 3a240478486164623dd4393488612c1a02b41f69
 
         </Dropdown></NavItem>
         <NavItem href={props.userPageUrl}>{props.userName}<span>BreannaLordoftheDarkStar71</span> </NavItem>

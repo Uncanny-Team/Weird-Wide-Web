@@ -95,9 +95,10 @@ class Form extends Component {
 
     render() {
         return (
-            <div>
+            <div className="www-content">
+            <h2> Found something weird?</h2>
                 <h1>
-                    Create You own weird item!
+                    Submit it!
                 </h1>
                 <form>
                     <Input
@@ -155,7 +156,7 @@ class Form extends Component {
                         value={this.state.tags}
                         onChange={this.handleInputChange}
                         name="tags"
-                        placeholder="Submit your tags here!"
+                        placeholder="Submit your tags here! Separate a new tag with a comma."
                     />
                     <Input
                         value={this.state.url}

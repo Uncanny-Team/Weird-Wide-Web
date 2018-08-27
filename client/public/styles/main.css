@@ -54,9 +54,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c000c', end
 }
 
 h1 {
-    font-family: "Hello Denver";
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-transform: uppercase;
+    margin: 5px;
+    padding: 5px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin: 5px;
+    padding: 5px;
 }
 
 h5 span#articleTitle {
@@ -121,6 +128,10 @@ img.www-thumbnail {
 max-width: 100%;
 }
 
+img.www-thumbnail.active {
+    max-width: none;
+    }
+
 /* materialize */
 
 nav {
@@ -180,6 +191,11 @@ nav .brand-logo,
     color: cadetblue;
 }
 
+button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
 
 /* Google Button */
 

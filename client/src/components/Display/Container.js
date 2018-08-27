@@ -2,7 +2,7 @@ import React from "react";
 
 export const Container = props => (
     
-    <div>
+    <div className="www-content">
       
           {props.children}
     </div>
