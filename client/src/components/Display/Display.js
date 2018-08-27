@@ -190,7 +190,7 @@ class Display extends Component {
                         {item.title}
                         </strong>
                         <br/>
-                        <a>
+                        <a href={item.url}>
                             {item.url}
                             </a>
                             <p>
