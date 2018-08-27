@@ -3,8 +3,10 @@ import { Navbar, Button, Icon, Dropdown, NavItem, Modal, Input, Row } from "reac
 
 const Nav = props => (
     <Navbar right href='#' brand={<span><header><h1>W<span className="animate-flicker">e</span>ird Wide Web</h1></header></span>}>
-        <NavItem href='#'>Randomize</NavItem>
-        <NavItem href='#'>Submit</NavItem>
+
+        <NavItem  href='/'>Random</NavItem>
+        <NavItem  href='#'>Submit</NavItem>
+
         <NavItem><Dropdown trigger={
             <Button className="dropdown-trigger">
                 Pages<Icon right>arrow_drop_down</Icon>
