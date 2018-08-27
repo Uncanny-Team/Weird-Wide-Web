@@ -28,7 +28,17 @@ class MainPage extends Component {
        let random = array[Math.floor(Math.random()*array.length)];
         console.log(random);
         this.setState({
-            items: res.data, title: "", category: "", medium: "", nsfw: "", url: "", description: "", weirdness: "", comments: "" });
+            title: random.title,
+            image: random.image,
+            category: random.category,
+            medium: random.medium,
+            nsfw: random.nsfw,
+            url: random.url,
+            description: random.description,
+            weirdness: random.weirdness,
+            comments: random.comments,
+            tags: random.tags
+     });
     };
 
     handleRandom = () => {
@@ -45,7 +55,18 @@ class MainPage extends Component {
     render() {
         return (
             <div>
-                <Feature/>
+                <Feature
+                title={this.state.title}
+                image={this.state.image}
+                category={this.state.category}
+                medium={this.state.medium}
+                nsfw={this.state.nsfw}
+                url={this.state.url[0]}
+                description={this.state.description}
+                weirdness={this.state.weirdness}
+                comments={this.state.comments}
+                tags={this.state.tags}
+                 />
                 <Footer/>
             </div>
         );

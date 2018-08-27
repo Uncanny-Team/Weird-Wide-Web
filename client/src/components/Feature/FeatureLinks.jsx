@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
 const FeatureLinks = props => (
     <li>
-        {/* <a href={this.props.link}>{this.props.link}</a> */}
+        <a href={props.url}>Link</a>
+        
     </li>
 );
 
