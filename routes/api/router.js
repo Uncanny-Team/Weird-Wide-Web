@@ -4,8 +4,7 @@ const controller = require("./controller");
 // Matched with "/api/items"
 // ==========================
 router.route("/")
-.post(controller.create)
-.get(controller.random);
+.post(controller.create);
 
 // Matches with "/api/items/:id"
 // ===============================
@@ -14,7 +13,7 @@ router.route("/:medium/:nsfw/:weirdness")
 
 // Matches with "/random"
 // ========================
-router.route("/api/random")
+router.route("/random")
 .get(controller.random);
 
     module.exports = router;

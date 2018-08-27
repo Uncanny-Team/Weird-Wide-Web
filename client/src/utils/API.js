@@ -18,9 +18,9 @@ export default {
          return axios.post("/api/items/", itemData);
     },
     // Random for mainpage.
-    randomItem: function(items) {
-        console.log("Random data",items);
-        return axios.get("/api/random");
+    randomItem: function(itemData) {
+        console.log(itemData);
+        return axios.get("/api/items/random/");
     },
     // Login for local.
     loginLocal: function(loginData) {
