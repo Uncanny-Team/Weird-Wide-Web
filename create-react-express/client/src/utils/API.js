@@ -1,4 +1,5 @@
 import axios from "axios";
+import Axios from "axios";
 
 export default {
         // Search for items.
@@ -16,6 +17,14 @@ export default {
     saveItem: function(itemData) {
         console.log(itemData);
          return axios.post("/api/items/", itemData);
+    },
+    loginLocal: function(loginData) {
+        console.log(loginData);
+        return axios.post("/login-local", loginData);
+    },
+    loginGoogle: function(loginData) {
+        console.log(loginData);
+        return axios("/google", loginData);
     }
   
 };
