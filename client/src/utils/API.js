@@ -17,6 +17,11 @@ export default {
         console.log(itemData);
          return axios.post("/api/items/", itemData);
     },
+    // Random for mainpage.
+    randomItem: function(items) {
+        console.log("Random data",items);
+        return axios.get("/api/random");
+    },
     // Login for local.
     loginLocal: function(loginData) {
         return axios.post("/login-local", loginData);
