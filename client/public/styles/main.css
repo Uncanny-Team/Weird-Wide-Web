@@ -149,6 +149,11 @@ img.www-thumbnail.active {
     display: flex;
 }
 
+.search-info {
+    padding: 20px;
+    width: 70%;
+}
+
 /* materialize */
 
 nav {
