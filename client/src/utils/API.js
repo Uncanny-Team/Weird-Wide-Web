@@ -24,7 +24,7 @@ export default {
     },
     // Login for local.
     loginLocal: function(loginData) {
-        return axios.post("/login-local", loginData);
+        return axios.post("/local", loginData);
     },
     // Login for Google.
     loginGoogle: function(loginData) {
