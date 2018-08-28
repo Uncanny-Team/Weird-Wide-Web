@@ -4,7 +4,7 @@ const db = require("../models");
 
 
 
-//auth login local
+//auth signup local
 router.post('/signup',(req, res) => {
     console.log("SIGNUP:", req.body)
     db.User.create(req.body)
