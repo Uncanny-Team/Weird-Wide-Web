@@ -199,7 +199,7 @@ class Display extends Component {
                                         {item.title}
                                     </h5>
                                     <h3>Link:</h3>
-                                    <a href={item.url}>
+                                    <a href={item.url} target="_blank">
                                         {item.url}
                                     </a>
                                     <p>

@@ -3,7 +3,7 @@ import FeatureTags from "./FeatureTags";
 import FeatureLinks from "./FeatureLinks";
 import FeatureRating from "./FeatureRating";
 import FeatureDesc from "./FeatureDesc";
-import Comment from "./Comment";
+// import Comment from "./Comment";
 
 class Feature extends React.Component {
     constructor(props) {
@@ -26,19 +26,11 @@ class Feature extends React.Component {
                         <img className="materialboxed www-thumbnail" id="articleImage" src={this.props.image}
                             alt="Weird Image" />
                         <FeatureRating
-                        weirdness={this.props.weirdness} />
+                            weirdness={this.props.weirdness} />
                         <div className="row">
                             <div className="col s12">
                                 <FeatureTags
-                                tags={this.props.tags} />
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col s12">
-                                <ul>
-                                    <FeatureLinks 
-                                    url={this.props.url}/>
-                                </ul>
+                                    tags={this.props.tags} />
                             </div>
                         </div>
                     </div>
@@ -46,9 +38,18 @@ class Feature extends React.Component {
 
                         <div className="row">
                             <div className="col s12">
-                                <FeatureDesc
-                                description={this.props.description}
-                                />
+                                <p>
+                                    <h3>Category:</h3> {this.props.category}
+                                </p>
+                                <h3>Links</h3>
+                                <ul>
+                                    <FeatureLinks
+                                        url={this.props.url} />
+                                </ul>
+                                <h3>Description:</h3>
+                                <p><FeatureDesc
+                                    description={this.props.description}
+                                /></p>
                             </div>
 
                             {/* <Comment /> */}
