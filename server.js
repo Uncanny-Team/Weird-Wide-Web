@@ -9,8 +9,7 @@ const app = express();
 const routes = require("./routes");
 const keys = require('./config/keys');
 const cookieSession = require('cookie-session'); 
-const passportSetup = require('./config/passport-setup');
-const path = require("path");
+const passportSetup = require('./config/passport-setup'); 
 
 // Using body-parser.
 // ===================
