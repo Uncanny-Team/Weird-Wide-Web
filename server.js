@@ -5,12 +5,11 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
-const app = express();
-const routes = require("./routes");
 const keys = require('./config/keys');
 const cookieSession = require('cookie-session'); 
-const passportSetup = require('./config/passport-setup');
-const path = require("path");
+const passportSetup = require('./config/passport-setup'); 
+const app = express();
+const routes = require("./routes");
 
 // Using body-parser.
 // ===================
@@ -59,6 +58,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/weirddb");
 //   console.log("connected to mongodb");
 //   });
 
+app.get("/", function(req, res) {
+  console.log("Server Is here!")
+})
 // Setting out server to run and listen on the specific port.
 // ===========================================================
 app.listen(PORT, function () {

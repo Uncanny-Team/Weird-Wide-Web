@@ -28,7 +28,7 @@ class MainPage extends Component {
        let random = array[Math.floor(Math.random()*array.length)];
         console.log(random);
         this.setState({
-            title: random.title,
+            title: random.title ? random.title: "",
             image: random.image,
             category: random.category,
             medium: random.medium,
@@ -49,7 +49,7 @@ class MainPage extends Component {
 
     componentDidMount() {
         console.log("Testing randomize");
-        this.handleRandom();
+        // this.handleRandom();
 
     }
     render() {
