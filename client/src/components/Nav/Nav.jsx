@@ -29,7 +29,7 @@ const Nav = props => (
                     </div>}>
     
                     <Row>
-                        <Input name="username" type="text" s={12} label="Usernamer" onChange={props.handleInputChange} validate />
+                        <Input name="username" type="text" s={12} label="Username" onChange={props.handleInputChange} validate />
                     </Row>
                     <Row>
                         <Input name="email" type="email" s={12} label="Email" onChange={props.handleInputChange} validate />

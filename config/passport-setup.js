@@ -42,10 +42,9 @@ passport.use(
     },
     function(email, password, done) {
       db.User.findOne({
-        where: {
           email: email
-        }
       }).then(function(dbUser) {
+        console.log(dbUser);
         if (!dbUser) {
           return done(null, false, {
             message: "Incorrect email."
@@ -56,29 +55,34 @@ passport.use(
           });
         }
 
+        // var filteredUser = {
+        //   email: dbUser.email
+        // }
+
         return done(null, dbUser);
-      });
+      })
+      .catch(err => done(err, false));
     }
   )
 );
 
 passport.serializeUser((user, done)=> {
-    done(null, user.id); 
+    done(null, user._id); 
 })
 
 passport.deserializeUser((id, done)=> {
-    User.findById(id).then((user) => {
-        done(null, user.id); 
+    db.User.findById(id)
+    .then((user) => {
+      if(!user) {
+        return done(null, false);
+      }
+        done(null, user._id); 
+    })
+    .catch(err => {
+      console.log(err);
+      done(err, false)
     });
 });
-
-// passport.serializeUser(function(user, cb) {
-//   cb(null, user);
-// });
-
-// passport.deserializeUser(function(obj, cb) {
-//   cb(null, obj);
-// });
 
 module.exports = passport;
 
