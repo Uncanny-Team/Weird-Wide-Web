@@ -51,7 +51,7 @@ class Feature extends React.Component {
                                 />
                             </div>
 
-                            <Comment />
+                            {/* <Comment /> */}
 
                         </div>
                     </div>
