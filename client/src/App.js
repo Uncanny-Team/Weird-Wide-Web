@@ -1,5 +1,5 @@
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-// import "./App.css";
+import UserPage from "./components/UserPage/UserPage";
 import Form from "./components/Form/FormLogic";
 import Display from "./components/Display/Display";
 import MainPage from "./components/MainPage/MainPage";
@@ -84,9 +84,7 @@ class App extends Component {
           <Route exact path="/" component={MainPage} />
           <Route exact path="/display" component={Display} />
           <Route exact path="/form" component={Form} />
-          <Route exact path="/profile" render={() => {
-            return <h1>Profile PAGE!</h1>; 
-          }} />
+          <Route exact path="/profile" component={UserPage} />
         </Switch>
       </div>
       </Router>

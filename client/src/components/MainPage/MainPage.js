@@ -49,7 +49,7 @@ class MainPage extends Component {
 
     componentDidMount() {
         console.log("Testing randomize");
-        // this.handleRandom();
+        this.handleRandom();
 
     }
     render() {
